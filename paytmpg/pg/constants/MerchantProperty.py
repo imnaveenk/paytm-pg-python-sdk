@@ -118,6 +118,10 @@ class MerchantProperty:
     @classmethod
     def set_base_url(cls, base_url):
         cls.base_url = base_url
+        cls.initiate_txn_url = cls.base_url + "/order/initiate"
+        cls.refund_url = cls.base_url + "/refund/apply"
+        cls.payment_status_url = cls.base_url + "/v3/order/status"
+        cls.refund_status_url = cls.base_url + "/v2/refund/status"
 
     @classmethod
     def get_base_url(cls):
